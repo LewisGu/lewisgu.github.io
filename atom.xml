@@ -45,6 +45,37 @@
   </entry>
   
   <entry>
+    <title>2020年终总结</title>
+    <link href="http://blog.lewisgu.com/2021/01/02/2021-01-02-2020conclusion/"/>
+    <id>http://blog.lewisgu.com/2021/01/02/2021-01-02-2020conclusion/</id>
+    <published>2021-01-02T04:42:13.000Z</published>
+    <updated>2021-01-02T06:15:51.436Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;2020，最终还是过去了。&lt;/p&gt;
+&lt;p&gt;疫情，买房，工作，恋爱。&lt;/p&gt;
+&lt;p&gt;算是今年对我来说的四件大事吧。&lt;/p&gt;
+&lt;p&gt;因为疫情的原因，在家宅了快一个月。看了些电影，学了点视频剪辑的技术，做了个鬼畜视频聊以自慰。&lt;/p&gt;
+&lt;p&gt;最终还是把房子的事情定了，也因为房贷开
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Life" scheme="http://blog.lewisgu.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Debug实战【1】：Bilibili排行榜爬虫之弹幕异常错误</title>
     <link href="http://blog.lewisgu.com/2020/03/08/2020-03-08-python-spider-bilibili-barrage-error/"/>
     <id>http://blog.lewisgu.com/2020/03/08/2020-03-08-python-spider-bilibili-barrage-error/</id>
@@ -582,36 +613,6 @@ ps -A
       <category term="Python" scheme="http://blog.lewisgu.com/tags/Python/"/>
     
       <category term="Spider" scheme="http://blog.lewisgu.com/tags/Spider/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vivado安装教程补丁</title>
-    <link href="http://blog.lewisgu.com/2017/08/05/2017-08-05-vivado-setup-tutial/"/>
-    <id>http://blog.lewisgu.com/2017/08/05/2017-08-05-vivado-setup-tutial/</id>
-    <published>2017-08-04T16:00:00.000Z</published>
-    <updated>2020-02-23T04:25:02.668Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;最近开始搞FPGA，用的Xilinx公司的板子，写Verilog，自然也就得用Xilinx自家的软件Vivado，版本2015.4。&lt;/p&gt;
-&lt;p&gt;安装配置网上也挺多教程的，选了个CSDN上的参考了下 &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="IDE配置" scheme="http://blog.lewisgu.com/categories/IDE%E9%85%8D%E7%BD%AE/"/>
-    
-    
-      <category term="FPGA" scheme="http://blog.lewisgu.com/tags/FPGA/"/>
-    
-      <category term="Vivado" scheme="http://blog.lewisgu.com/tags/Vivado/"/>
     
   </entry>
   
