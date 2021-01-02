@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基于ClIon的CMake、MinGW与Cygwin配置简易指南, NWPU C Python Lewisgu">
-    <meta name="description" content="Clion是捷克公司JetBrains出品的JB全家桶之中主要面向C、C++的集成开发环境。JB家的Pycharm和IDEA是其最为出名的两款，而我也是从Pycharm入的坑。因为近期想再把C捡起来复chong习xin复xue习xi，在网上">
+    <meta name="keywords" content="2020年终总结, NWPU C Python Lewisgu">
+    <meta name="description" content="2020，最终还是过去了。
+疫情，买房，工作，恋爱。
+算是今年对我来说的四件大事吧。
+因为疫情的原因，在家宅了快一个月。看了些电影，学了点视频剪辑的技术，做了个鬼畜视频聊以自慰。
+最终还是把房子的事情定了，也因为房贷开始每月月光了。体制内的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>基于ClIon的CMake、MinGW与Cygwin配置简易指南 | 浅码深思</title>
+    <title>2020年终总结 | 浅码深思</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -275,13 +279,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        基于ClIon的CMake、MinGW与Cygwin配置简易指南
+                        2020年终总结
                     </div>
                 </div>
             </div>
@@ -373,12 +377,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/" target="_blank">
-                                <span class="chip bg-color">C</span>
-                            </a>
-                        
-                            <a href="/tags/IDE/" target="_blank">
-                                <span class="chip bg-color">IDE</span>
+                            <a href="/tags/daily/" target="_blank">
+                                <span class="chip bg-color">daily</span>
                             </a>
                         
                     </div>
@@ -389,8 +389,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/IDE%E9%85%8D%E7%BD%AE/" class="post-category" target="_blank">
-                                IDE配置
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category" target="_blank">
+                                随笔
                             </a>
                         
                     </div>
@@ -401,21 +401,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2018-06-18
+                    2021-01-02
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        1.6k
+                        196
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        5 Min
+                        1 Min
                     </div>
                     
                 
@@ -431,74 +431,14 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Clion是捷克公司JetBrains出品的JB全家桶之中主要面向C、C++的集成开发环境。JB家的Pycharm和IDEA是其最为出名的两款，而我也是从Pycharm入的坑。因为近期想再把C捡起来复chong习xin复xue习xi，在网上看了好些相关IDE推荐，最后还是选择Clion。</p>
-<p>Clion与CodeBlocks等不太一样的地方在于，官方允许基于MinGW、Cygwin与VisualStudio三种工具链进行设置，在此仅对前两种进行介绍。</p>
-<hr>
-<p>硬件配置：Dell游匣笔记本7559，CPU:i5-6300HQ，内存：8G。</p>
-<p>系统配置：Win10专业版1803</p>
-<p>软件配置：JetBrains Clion 2018.1.3    </p>
-<p><a href="https://jaist.dl.sourceforge.net/project/mingw/Installer/mingw-get-setup.exe" target="_blank" rel="noopener">MinGW</a> 2013-10-26    </p>
-<p><a href="https://cygwin.com/ml/cygwin-announce/2018-02/msg00002.html" target="_blank" rel="noopener">Cygwin</a> 2.10.0    </p>
-<p><a href="[https://cmake.org/download/](https://link.jianshu.com/?t=https%3A%2F%2Fcmake.org%2Fdownload%2F)">CMake</a>3.11.4</p>
-<hr>
-<p>首先安装CMake、Cygwin与MinGW。</p>
-<h5 id="CMake安装"><a href="#CMake安装" class="headerlink" title="CMake安装"></a>CMake安装</h5><p>其中CMake是最容易也最傻瓜的。搜索官网，下载对应平台的版本，这里建议直接下载.msi的安装版而非.zip的绿色版，从而免除手动配置环境变量。简单地说就是勾选同意协议、将CMake添加到面向所有使用者的系统路径(Add CMake to the system PATH for all users)。安装路径可根据自己需要修改。随后next即可。</p>
-<p>正确安装后，在命令行输入<code>cmake</code>会弹出如下界面:<br><img src="https://img-blog.csdn.net/20180618133748782?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<h5 id="MinGW安装"><a href="#MinGW安装" class="headerlink" title="MinGW安装"></a>MinGW安装</h5><p>从官网先下载好安装的下载器，需要设置如下所示的版本、基于的架构等。<br><img src="https://img-blog.csdn.net/20180618133910549?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br><img src="https://img-blog.csdn.net/2018061813381987?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>next后则可设置安装目录，个人喜欢在D盘下新建一个MinGW文件夹，这样方便管理与查找。</p>
-<p><img src="https://img-blog.csdn.net/20180618133836852?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>接下来一路next即可。</p>
-<p>在桌面上会出现一个下图所示图标，双击即可进入MinGW的包管理。</p>
-<p><img src="https://img-blog.csdn.net/20180618133927844?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>安装界面如下所示，</p>
-<p><img src="https://img-blog.csdn.net/20180618134042521?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>此处我们以Basic Setup中的mingw32-base为例介绍安装流程。</p>
-<p>点击左侧的Basic Setup，鼠标移动至mingw32-base处，右键选中Mark for Installation，如下图所示。</p>
-<p><img src="https://img-blog.csdn.net/20180618134156111?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>属性栏有Package（包名）、Class（类别，一般需要选择bin与dev的）、InstalledVersion（安装版本，仅勾选后才会显示）、Repository Version（与前者类似）、Describtion（说明，对包的用途进行简单介绍）</p>
-<p>再点击左侧菜单栏中的Installation，下拉选中Apply Changes，会弹出如下所示的窗</p>
-<p><img src="https://img-blog.csdn.net/20180618134222467?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>点击Apply，随后软件自动进行下载安装，完成后也会弹出类似日志的细节提示，说明哪些压缩包已被安装。</p>
-<p><img src="https://img-blog.csdn.net/20180618134231800?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br><img src="https://img-blog.csdn.net/20180618134238669?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br><img src="https://img-blog.csdn.net/20180618134245914?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br>若要进行C/C++开发，原则上需要安装的MinGW包如下所示</p>
-<pre><code>Basic Setup部分
-mingw32-base
-mingw32-gcc-g++
-All Packages部分
-主要集中在MinGW Base System分支下
-勾选需注意class
-mingw32-gcc            c编译器
-mingw32-gcc-g++        c++编译器
-mingw32-gdb            debugger</code></pre><p>验证是否安装成功，则可以在命令行中输入<code>gcc</code></p>
-<p>出现下述界面即说明安装成功。<br><img src="https://img-blog.csdn.net/20180618134304509?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<h5 id="Cygwin安装"><a href="#Cygwin安装" class="headerlink" title="Cygwin安装"></a>Cygwin安装</h5><p>相对而言Cygwin安装是最麻烦的，因为本身Cygwin就是许多自由软件的集合，在Windows上运行类UNIX系统。体积和规模就比MinGW与CMake大了不少。</p>
-<p>Cygwin安装方法类似MinGW，从官网下载下来后直接打开，一路next，中间会需要选择下载方式，一般选择Install from Internet（即第一种），然后选择ROOT的安装目录（此处照旧新建Cygwin然后把东西扔里面），接下来需要选择安装包的本地下载位置，此处新建一个IDM文件夹然后选择它，对于选择连接方式，默认直连，短暂跳过一个页面后，会出现下载地址的选择，一般来说国内公网选择163的站点没问题，网易的<a href="http://mirrors.163.com/.help/cygwin.html" target="_blank" rel="noopener">Cygwin镜像使用帮助</a>对使用说明进行了详细的介绍，阅读并跟随操作即可，教育网则可选择清华TUNA源、中科大源等高校镜像站点，使用VPN的用户建议根据目标国家进行选择，或暂时退出VPN。</p>
-<p>然后就会自动进入下一步，弹出选择窗口。在搜索小窗处输入gcc-core、gcc-g++、make、gdb、binutils，并在devel下点击skip，在Bin属性下出现勾选的方框即可。</p>
-<p>若有其他需求，则根据需要搜索相对应的包并安装，例如笔者就额外增加并安装了Python模块、net下的openssl、openssh等，此处增加的包/模块越多，安装的时间也就越长。</p>
-<p>接下来就是漫长的等待，其需要经历下载——安装——启动三个阶段。</p>
-<p>完成后会自动勾选Create icon on Desktop，点击完成即可。</p>
-<h5 id="Clion安装与配置"><a href="#Clion安装与配置" class="headerlink" title="Clion安装与配置"></a>Clion安装与配置</h5><p>接下来就是最重要的ClIon安装配置。</p>
-<p>安装很简单，例行配置目录以及启动项。关键是配置，JB家软件的配置逻辑基本都是先进行主题配置再进行运行相关的配置。</p>
-<p>UI主题根据爱好选择Decula或者InteliJ，这里我选择后者。</p>
-<p>然后就进入工具链设置。</p>
-<p><img src="https://img-blog.csdn.net/20180618134436725?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>首先设置MinGW的，左侧点击加号，环境选择MinGW，点击右侧的按钮，将MinGW文件夹设为目标路径。</p>
-<p>然后照例设置CMake、Make、C Compiler和C++ Compiler。其中由于MinGW的Make可执行程序名字为mingw32-make.exe，故复制一个副本然后更名为Make.exe，Make的路径直接选中它。</p>
-<p>设置好MinGW的文件路径后，软件会自动探测对应Make、C Compiler和C++ Compiler的可执行程序，但速度略慢，可等待也可手动选择。</p>
-<p>设置完成后，可对语言插件进行设置，这里只设置Markdown的支持，其他保持默认状态。</p>
-<p>下面进行HelloWorld测试</p>
-<p>新建一个工程，直接Run</p>
-<p><img src="https://img-blog.csdn.net/20180618134523131?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>顺利输出Hello，world!</p>
-<p><img src="https://img-blog.csdn.net/20180618134531105?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>设置Cygwin的配置</p>
-<p>大体类同于MinGW，在菜单栏中选中File，单击Settings，则会弹出一个窗口，选择Build,Execution，Deployment分支，点击下属的Toolchains则会弹出刚才设置MInGW的窗口。</p>
-<p><img src="https://img-blog.csdn.net/20180618134958947?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>点击+号，依次对Enviroment类型、路径，以及CMake、Make、C Compiler、C++ Compiler以及Debugger进行设置，其中一旦设置了Enviroment的路径，CMake与Debugger则会自动选中（即CMake可不使用额外安装的版本，而且Cygwin下使用额外安装的CMake会弹出警告提示），设置完毕后可点击左侧的向上箭头将Cygwin设为默认选项</p>
-<p>下面进行输出测试</p>
-<p>新建一个工程，直接Run</p>
-<p><img src="https://img-blog.csdn.net/20180618134835582?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br><img src="https://img-blog.csdn.net/20180618135026142?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMwMjMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
-<p>顺利输出Hello，Louis!</p>
-<p>至此基本配置完成。</p>
+                <p>2020，最终还是过去了。</p>
+<p>疫情，买房，工作，恋爱。</p>
+<p>算是今年对我来说的四件大事吧。</p>
+<p>因为疫情的原因，在家宅了快一个月。看了些电影，学了点视频剪辑的技术，做了个鬼畜视频聊以自慰。</p>
+<p>最终还是把房子的事情定了，也因为房贷开始每月月光了。体制内的薪资，害，就这么过吧。</p>
+<p>工作算是稳步开展了，就是年中扁桃体日常化脓，以及年底手指这两个小插曲，让我体会到了身体的重要性。</p>
+<p>至于恋爱，没想到单了这么久，还能遇到这么投缘而美好的一只女孩子，我可真是太幸运了。</p>
+<p>2021，继续努力向前吧！</p>
 
             </div>
             <hr/>
@@ -522,7 +462,7 @@ mingw32-gdb            debugger</code></pre><p>验证是否安装成功，则可
                     </span>
                     <a href="http://blog.lewisgu.com" class="b-link-green">浅码深思</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/06/18/2018-06-18-c-compile-envn-build/" class="b-link-green">基于ClIon的CMake、MinGW与Cygwin配置简易指南</a>
+                    <a href="/2021/01/02/2021-01-02-2020conclusion/" class="b-link-green">2020年终总结</a>
                 </p>
             </div>
         </div>
@@ -544,7 +484,7 @@ mingw32-gdb            debugger</code></pre><p>验证是否安装成功，则可
         repo: '',
         owner: '',
         admin: null,
-        id: '2018-06-18T00-00-00',
+        id: '2021-01-02T12-42-13',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -565,47 +505,48 @@ mingw32-gdb            debugger</code></pre><p>验证是否安装成功，则可
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2018/07/28/2018-07-28-labwindows-matlab-mix-program/">
+                <a href="/2021/01/02/2021-01-02-2020conclusion/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="LabWindows/CVI与Matlab混合编程的一种实现方法">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2020年终总结">
                         
-                        <span class="card-title">LabWindows/CVI与Matlab混合编程的一种实现方法</span>
+                        <span class="card-title">2020年终总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">最近一段时间都在学习基于LabWindows/CVI（后文简称CVI）开发模拟软件，由于已有一个不太稳健，但基本框架较为齐备的工程。所以我的工作主要是在这个已有的工程上进行debug、整理修改、开发新功能，从5月开始已经持续了接近三个月。
-</div>
+                    <div class="summary">2020，最终还是过去了。
+疫情，买房，工作，恋爱。
+算是今年对我来说的四件大事吧。
+因为疫情的原因，在家宅了快一个月。看了些电影，学了点视频剪辑的技术，做了个鬼畜视频聊以自慰。
+最终还是把房子的事情定了，也因为房贷开始每月月光了。体制内的</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-07-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-01-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91/" class="post-category" target="_blank">
-                                    混合开发
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category" target="_blank">
+                                    随笔
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/" target="_blank">
-                        <span class="chip bg-color">C</span>
-                    </a>
-                    
-                    <a href="/tags/LabWindows-CVI/" target="_blank">
-                        <span class="chip bg-color">LabWindows/CVI</span>
+                    <a href="/tags/daily/" target="_blank">
+                        <span class="chip bg-color">daily</span>
                     </a>
                     
                 </div>
@@ -619,48 +560,35 @@ mingw32-gdb            debugger</code></pre><p>验证是否安装成功，则可
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2017/08/10/2017-08-10-python-spider-deskpic/">
+                <a href="/2020/04/06/2020-04-06-linux-daily-note/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Python爬虫实战【2】：自定义年月日国别抓取Bing壁纸">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Linux常用笔记">
                         
-                        <span class="card-title">Python爬虫实战【2】：自定义年月日国别抓取Bing壁纸</span>
+                        <span class="card-title">Linux常用笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">今天写完程序的最深体会。
-就是大概我python水平可能也就停留在这半死不活，写几十行都要各种翻资料的low B level上了吧。
-令人悲伤。
-言归正传，代码地址。
-Bing壁纸有API接口，也有不同网站提供浏览服务，其中本例使用的是Lo</div>
+                    <div class="summary">随着上班的繁忙，又有一个月没有写博客了。
+今天主要记录一下自己使用Linux过程中所使用的主要命令，算是个备忘录。
+由于目前WSL以及虚拟机均使用Ubuntu较多，所以也就主要记录该系统下的命令。
+更换Ubuntu源参考来源：Ubuntu1</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2017-08-10
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python%E5%BC%80%E5%8F%91/" class="post-category" target="_blank">
-                                    Python开发
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category" target="_blank">
+                                    随笔
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/Spider/" target="_blank">
-                        <span class="chip bg-color">Spider</span>
-                    </a>
-                    
                 </div>
                 
             </div>
