@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>2020年终总结</title>
-      <link href="/2021/01/02/2021-01-02-2020conclusion/"/>
-      <url>/2021/01/02/2021-01-02-2020conclusion/</url>
+      <title>2021新Flag</title>
+      <link href="/2021/01/02/2021-new-flag/"/>
+      <url>/2021/01/02/2021-new-flag/</url>
       
-        <content type="html"><![CDATA[<p>2020，最终还是过去了。</p><p>疫情，买房，工作，恋爱。</p><p>算是今年对我来说的四件大事吧。</p><p>因为疫情的原因，在家宅了快一个月。看了些电影，学了点视频剪辑的技术，做了个鬼畜视频聊以自慰。</p><p>最终还是把房子的事情定了，也因为房贷开始每月月光了。体制内的薪资，害，就这么过吧。</p><p>工作算是稳步开展了，就是年中扁桃体日常化脓，以及年底手指这两个小插曲，让我体会到了身体的重要性。</p><p>至于恋爱，没想到单了这么久，还能遇到这么投缘而美好的一只女孩子，我可真是太幸运了。</p><p>2021，继续努力向前吧！</p>]]></content>
+        <content type="html"><![CDATA[<p>新的一年，继续立flag。</p><h2 id="工作及技术"><a href="#工作及技术" class="headerlink" title="工作及技术"></a>工作及技术</h2><ol><li><p>【日常】顺利执行并优质完成交代的一切事务。去年做的不错，今年继续加油</p></li><li><p>继续深入C语言开发技巧，基本掌握C++的开发技术【虽然觉得去年也学了点但好像没学到位，今年加个小目标，看完《C++ pp》】，看完《代码整洁之道》【争取吧】，视情况看《重构》【这个真求不来】，至少一小半本《代码大全》【争取吧】。</p></li><li><p>完成至少1篇论文（嵌入式软件数据管理相关），1个软件项目（异构数据转换工具）=&gt;完成后进行软著申请工作，争取1篇专利（数据转换或数据管理工具）。完成目标关联的初稿拟制</p></li><li><p>积极准备5月份的信息系统高级管理师考试，争取一次通过。</p></li></ol><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><p>线上线下，看50部电影【去年只完成了一半的kpi】，3部话剧/舞剧/演唱会【去年只完成了一部话剧，今年争取都各参加一个】，1次音乐节【视来成都参展的嘉宾而定，未必一定要去】。如果新裤子来成都一定买票去看现场【每年都期待新裤子】。</p><p><del>如果可能的话，今年结束单身</del>。既然已经脱单了，那就好好地和BoBo酱一起探索这个世界。</p><p>最最最重要的，<strong>平安喜乐</strong></p>]]></content>
       
       
       <categories>
@@ -20,28 +20,9 @@
       
         <tags>
             
-            <tag> daily </tag>
+            <tag> Life </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Linux常用笔记</title>
-      <link href="/2020/04/06/2020-04-06-linux-daily-note/"/>
-      <url>/2020/04/06/2020-04-06-linux-daily-note/</url>
-      
-        <content type="html"><![CDATA[<p>随着上班的繁忙，又有一个月没有写博客了。</p><p>今天主要记录一下自己使用Linux过程中所使用的主要命令，算是个备忘录。</p><p>由于目前WSL以及虚拟机均使用Ubuntu较多，所以也就主要记录该系统下的命令。</p><h1 id="更换Ubuntu源"><a href="#更换Ubuntu源" class="headerlink" title="更换Ubuntu源"></a>更换Ubuntu源</h1><p>参考来源：<a href="https://blog.csdn.net/zhangjiahao14/article/details/80554616" target="_blank" rel="noopener">Ubuntu18.04下更改apt源为阿里云源</a></p><p>修改Ubuntu源主要三步操作：</p><ol><li><p>备份sources.list</p><pre class=" language-shell"><code class="language-shell">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</code></pre></li><li><p>按Ubuntu版本对应的代号，设置阿里云作为源。</p><pre><code>Ubuntu 12.04 (LTS)代号为precise。Ubuntu 14.04 (LTS)代号为trusty。Ubuntu 15.04 代号为vivid。Ubuntu 15.10 代号为wily。Ubuntu 16.04 (LTS)代号为xenial。Ubuntu 18.04 (LTS)代号bionic</code></pre><p>或直接使用</p><pre class=" language-shell"><code class="language-shell">lsb_release -c</code></pre><p>查看本版本的代号</p></li><li><p>将下述的内容写到sources.list中</p><pre class=" language-shell"><code class="language-shell">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</code></pre><p>特别注意<strong>如果版本号不对应，无法正常刷新仓库</strong></p></li><li><p>刷新仓库</p><pre class=" language-shell"><code class="language-shell">sudo apt-get updatesudo apt-get upgrade</code></pre></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
       
     </entry>
     

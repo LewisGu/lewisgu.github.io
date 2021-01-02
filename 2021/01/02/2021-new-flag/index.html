@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux常用笔记, NWPU C Python Lewisgu">
-    <meta name="description" content="随着上班的繁忙，又有一个月没有写博客了。
-今天主要记录一下自己使用Linux过程中所使用的主要命令，算是个备忘录。
-由于目前WSL以及虚拟机均使用Ubuntu较多，所以也就主要记录该系统下的命令。
-更换Ubuntu源参考来源：Ubuntu1">
+    <meta name="keywords" content="2021新Flag, NWPU C Python Lewisgu">
+    <meta name="description" content="新的一年，继续立flag。
+工作及技术
+【日常】顺利执行并优质完成交代的一切事务。去年做的不错，今年继续加油
+
+继续深入C语言开发技巧，基本掌握C++的开发技术【虽然觉得去年也学了点但好像没学到位，今年加个小目标，看完《C++ pp》】，看">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux常用笔记 | 浅码深思</title>
+    <title>2021新Flag | 浅码深思</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -278,13 +279,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Linux常用笔记
+                        2021新Flag
                     </div>
                 </div>
             </div>
@@ -374,9 +375,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Life/" target="_blank">
+                                <span class="chip bg-color">Life</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -396,14 +401,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-04-06
+                    2021-01-02
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        365
+                        367
                     </div>
                     
 
@@ -426,43 +431,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>随着上班的繁忙，又有一个月没有写博客了。</p>
-<p>今天主要记录一下自己使用Linux过程中所使用的主要命令，算是个备忘录。</p>
-<p>由于目前WSL以及虚拟机均使用Ubuntu较多，所以也就主要记录该系统下的命令。</p>
-<h1 id="更换Ubuntu源"><a href="#更换Ubuntu源" class="headerlink" title="更换Ubuntu源"></a>更换Ubuntu源</h1><p>参考来源：<a href="https://blog.csdn.net/zhangjiahao14/article/details/80554616" target="_blank" rel="noopener">Ubuntu18.04下更改apt源为阿里云源</a></p>
-<p>修改Ubuntu源主要三步操作：</p>
-<ol>
-<li><p>备份sources.list</p>
-<pre class=" language-shell"><code class="language-shell">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</code></pre>
+                <p>新的一年，继续立flag。</p>
+<h2 id="工作及技术"><a href="#工作及技术" class="headerlink" title="工作及技术"></a>工作及技术</h2><ol>
+<li><p>【日常】顺利执行并优质完成交代的一切事务。去年做的不错，今年继续加油</p>
 </li>
-<li><p>按Ubuntu版本对应的代号，设置阿里云作为源。</p>
-<pre><code>Ubuntu 12.04 (LTS)代号为precise。
-Ubuntu 14.04 (LTS)代号为trusty。
-Ubuntu 15.04 代号为vivid。
-Ubuntu 15.10 代号为wily。
-Ubuntu 16.04 (LTS)代号为xenial。
-Ubuntu 18.04 (LTS)代号bionic</code></pre><p>或直接使用</p>
-<pre class=" language-shell"><code class="language-shell">lsb_release -c</code></pre>
-<p>查看本版本的代号</p>
+<li><p>继续深入C语言开发技巧，基本掌握C++的开发技术【虽然觉得去年也学了点但好像没学到位，今年加个小目标，看完《C++ pp》】，看完《代码整洁之道》【争取吧】，视情况看《重构》【这个真求不来】，至少一小半本《代码大全》【争取吧】。</p>
 </li>
-<li><p>将下述的内容写到sources.list中</p>
-<pre class=" language-shell"><code class="language-shell">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</code></pre>
-<p>特别注意<strong>如果版本号不对应，无法正常刷新仓库</strong></p>
+<li><p>完成至少1篇论文（嵌入式软件数据管理相关），1个软件项目（异构数据转换工具）=&gt;完成后进行软著申请工作，争取1篇专利（数据转换或数据管理工具）。完成目标关联的初稿拟制</p>
 </li>
-<li><p>刷新仓库</p>
-<pre class=" language-shell"><code class="language-shell">sudo apt-get update
-sudo apt-get upgrade</code></pre>
+<li><p>积极准备5月份的信息系统高级管理师考试，争取一次通过。</p>
 </li>
 </ol>
+<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><p>线上线下，看50部电影【去年只完成了一半的kpi】，3部话剧/舞剧/演唱会【去年只完成了一部话剧，今年争取都各参加一个】，1次音乐节【视来成都参展的嘉宾而定，未必一定要去】。如果新裤子来成都一定买票去看现场【每年都期待新裤子】。</p>
+<p><del>如果可能的话，今年结束单身</del>。既然已经脱单了，那就好好地和BoBo酱一起探索这个世界。</p>
+<p>最最最重要的，<strong>平安喜乐</strong></p>
 
             </div>
             <hr/>
@@ -486,7 +468,7 @@ sudo apt-get upgrade</code></pre>
                     </span>
                     <a href="http://blog.lewisgu.com" class="b-link-green">浅码深思</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/04/06/2020-04-06-linux-daily-note/" class="b-link-green">Linux常用笔记</a>
+                    <a href="/2021/01/02/2021-new-flag/" class="b-link-green">2021新Flag</a>
                 </p>
             </div>
         </div>
@@ -508,7 +490,7 @@ sudo apt-get upgrade</code></pre>
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-04-06T20-37-35',
+        id: '2021-01-02T13-49-30',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -529,29 +511,30 @@ sudo apt-get upgrade</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/01/02/2021-01-02-2020conclusion/">
+                <a href="/2021/01/02/2021-new-flag/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2020年终总结">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="2021新Flag">
                         
-                        <span class="card-title">2020年终总结</span>
+                        <span class="card-title">2021新Flag</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">2020，最终还是过去了。
-疫情，买房，工作，恋爱。
-算是今年对我来说的四件大事吧。
-因为疫情的原因，在家宅了快一个月。看了些电影，学了点视频剪辑的技术，做了个鬼畜视频聊以自慰。
-最终还是把房子的事情定了，也因为房贷开始每月月光了。体制内的</div>
+                    <div class="summary">新的一年，继续立flag。
+工作及技术
+【日常】顺利执行并优质完成交代的一切事务。去年做的不错，今年继续加油
+
+继续深入C语言开发技巧，基本掌握C++的开发技术【虽然觉得去年也学了点但好像没学到位，今年加个小目标，看完《C++ pp》】，看</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-01-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-01-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -564,11 +547,12 @@ sudo apt-get upgrade</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/daily/" target="_blank">
-                        <span class="chip bg-color">daily</span>
+                    <a href="/tags/Life/" target="_blank">
+                        <span class="chip bg-color">Life</span>
                     </a>
                     
                 </div>
@@ -697,7 +681,7 @@ sudo apt-get upgrade</code></pre>
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">28.8k</span>
+                <span class="white-color">28.6k</span>
             
 
             
