@@ -1,0 +1,826 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="VPS运行服务记录, NWPU C Python Lewisgu">
+    <meta name="description" content="今天放搬家假，于是一大早起来就继续鼓捣自己的服务器，然后就想着对目前服务器上跑的东西做个总结，水一篇文章。
+不可言说买服务器的本意，自然就是为了不可言说了。
+doubi_Github
+逗比根据地
+v2ray
+V2Ray一键安装脚本建议v2r">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>VPS运行服务记录 | 浅码深思</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="浅码深思" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">浅码深思</span>
+                    </a>
+                </div>
+                
+
+<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>Friends</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search" title="Search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">浅码深思</div>
+        <div class="logo-desc">
+            
+            会写一点代码的全菜工程师
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                Friends
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lewisgu/lewisgu.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+
+    <div class="social-link">
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+        <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lewisgu/lewisgu.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        VPS运行服务记录
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/VPS/" target="_blank">
+                                <span class="chip bg-color">VPS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/VPS%E5%BC%80%E5%8F%91/" class="post-category" target="_blank">
+                                VPS开发
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-03-01
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
+                        1k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
+                        3 Min
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>今天放搬家假，于是一大早起来就继续鼓捣自己的服务器，然后就想着对目前服务器上跑的东西做个总结，水一篇文章。</p>
+<h2 id="不可言说"><a href="#不可言说" class="headerlink" title="不可言说"></a>不可言说</h2><p>买服务器的本意，自然就是为了不可言说了。</p>
+<p><a href="https://github.com/ToyoDAdoubi" target="_blank" rel="noopener">doubi_Github</a></p>
+<p><a href="https://doubibackup.com/" target="_blank" rel="noopener">逗比根据地</a></p>
+<p><em>v2ray</em></p>
+<p><a href="https://github.com/233boy/v2ray/wiki/V2Ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC" target="_blank" rel="noopener">V2Ray一键安装脚本</a><br>建议v2ray本地配置及移动端配置时直接复制服务端的vmess地址</p>
+<h2 id="Jupyter-Notebook服务器"><a href="#Jupyter-Notebook服务器" class="headerlink" title="Jupyter Notebook服务器"></a>Jupyter Notebook服务器</h2><p>在服务器上配个Jupyter Notebook还是很舒服的。</p>
+<h3 id="在服务器上搭建Jupyter-Notebook"><a href="#在服务器上搭建Jupyter-Notebook" class="headerlink" title="在服务器上搭建Jupyter Notebook"></a>在服务器上搭建Jupyter Notebook</h3><p><a href="https://zhuanlan.zhihu.com/p/44405596" target="_blank" rel="noopener">搭建Jupyter Notebook远程云服务器</a><br><a href="https://zhuanlan.zhihu.com/p/64524822" target="_blank" rel="noopener">如何设置远程访问的Jupyter Notebook服务器-04（服务器篇）</a><br>简单概括就是</p>
+<ul>
+<li><ol>
+<li>pip/pip3安装 Jupyter Notebook</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>生成配置文件</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>调用notebook.lib.passwd()或IPython.lib.passwd()，输入密码并保存生成的hash</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>将hash配置到jupyter_notebook_config<pre class=" language-shell"><code class="language-shell">vim ~/.jupyter/jupyter_notebook_config.py</code></pre>
+在config.py尾部增加<pre class=" language-python"><code class="language-python">c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>ip <span class="token operator">=</span> <span class="token string">'*'</span>                   <span class="token comment" spellcheck="true">#所有绑定服务器的IP都能访问，若想只在特定ip访问，输入ip地址即可</span>
+c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>port <span class="token operator">=</span> <span class="token number">6666</span>                <span class="token comment" spellcheck="true">#将端口设置为自己喜欢的吧，默认是8888</span>
+c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>open_browser <span class="token operator">=</span> <span class="token boolean">False</span>     <span class="token comment" spellcheck="true">#我们并不想在服务器上直接打开Jupyter Notebook，所以设置成False</span>
+c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>notebook_dir <span class="token operator">=</span> <span class="token string">'/root/jupyter_projects'</span> <span class="token comment" spellcheck="true">#这里是设置Jupyter的根目录，若不设置将默认root的根目录，不安全</span>
+c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>allow_root <span class="token operator">=</span> <span class="token boolean">True</span>      <span class="token comment" spellcheck="true"># 为了安全，Jupyter默认不允许以root权限启动jupyter </span></code></pre>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>启动服务</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>设置后台运行</li>
+</ol>
+</li>
+</ul>
+<p>在云服务器中搭建好jupyter并运行后, 发现它会占用当前终端, 于是研究了一下怎么让它在后台运行.</p>
+<pre class=" language-shell"><code class="language-shell">1.入门级: jupyter notebook --allow-root > jupyter.log 2>&1 &
+2.进阶版: nohup jupyter notebook --allow-root > jupyter.log 2>&1 &</code></pre>
+<p>解释: 1. 用&amp;让命令后台运行, 并把标准输出写入jupyter.log中</p>
+<p>nohup表示no hang up, 就是不挂起, 于是这个命令执行后即使终端退出, 也不会停止运行.</p>
+<p>终止进程</p>
+<p>执行上面第2条命令, 可以发现关闭终端重新打开后, 用jobs找不到jupyter这个进程了, 于是要用ps -a, 可以显示这个进程的pid.</p>
+<pre class=" language-shell"><code class="language-shell">kill -9 pid 终止进程</code></pre>
+<h3 id="将本地Jupyter分享给局域网使用"><a href="#将本地Jupyter分享给局域网使用" class="headerlink" title="将本地Jupyter分享给局域网使用"></a>将本地Jupyter分享给局域网使用</h3><p><a href="https://blog.csdn.net/simple_the_best/article/details/77005400" target="_blank" rel="noopener">设置 jupyter notebook 可远程访问</a></p>
+<h2 id="Uptimerobot监控Website-Ping-VPS-Port"><a href="#Uptimerobot监控Website-Ping-VPS-Port" class="headerlink" title="Uptimerobot监控Website/Ping/VPS Port"></a>Uptimerobot监控Website/Ping/VPS Port</h2><p><a href="https://taifua.com/uptimerobot-monitor.html" target="_blank" rel="noopener">使用UptimeRobot对网站和服务器实时监控</a></p>
+<p>免费版足够使用了，最高可在5min内监控最多50个目标<br>简要概括</p>
+<ol>
+<li>注册账号</li>
+<li>选择Http(s)来监控网站，选择Ping来监控我的服务器。Port一般用于VPS监控端口</li>
+<li>创建监控页，My Settings，选择右下角Add Public Status Pages，进行配置，并将设置的custom domain配置在域名CNAME下，等候DNS生效。</li>
+</ol>
+<p><em>注：</em> Uptimerobot可能会出现访问时502异常，请等待。</p>
+<h2 id="NetData监控"><a href="#NetData监控" class="headerlink" title="NetData监控"></a>NetData监控</h2><p><a href="https://juejin.im/post/5b739906518825612d6449e4" target="_blank" rel="noopener">在Ubuntu上使用Netdata设置实时性能监控</a></p>
+<p>基本上都是一键安装，IP+默认端口19999，无密码</p>
+<h2 id="防火墙设置"><a href="#防火墙设置" class="headerlink" title="防火墙设置"></a>防火墙设置</h2><p>VPS使用的是Debian9,故使用ufw设置防火墙</p>
+<p><a href="https://www.howtoing.com/how-to-set-up-a-firewall-with-ufw-on-debian-9" target="_blank" rel="noopener">如何在Debian 9上使用UFW设置防火墙</a></p>
+<p>一些其他的优化</p>
+<p><a href="https://zhang.ge/4321.html" target="_blank" rel="noopener">Linux/VPS系统安全设置整理</a>from <a href="https://zhang.ge/" target="_blank" rel="noopener">张戈博客</a></p>
+<p><a href="https://zhang.ge/2409.html" target="_blank" rel="noopener">Linux优化方法收集及整理</a>from <a href="https://zhang.ge/" target="_blank" rel="noopener">张戈博客</a></p>
+<h2 id="Searx元搜索"><a href="#Searx元搜索" class="headerlink" title="Searx元搜索"></a>Searx元搜索</h2><p>2020.3.1更新</p>
+<p>主要参考</p>
+<p><a href="https://www.moerats.com/archives/875/" target="_blank" rel="noopener">使用Searx搭建一个私人的搜索引擎平台，可展现Google/Bing等70多种搜索网站的搜索结果</a></p>
+<p>Dockerfile直接使用的上面这个，一次性配好。</p>
+<p><a href="https://coderschool.cn/3153.html" target="_blank" rel="noopener">searX 搭建个人聚合搜索引擎教程</a>也可以看看。</p>
+<p>目前比较大的坑就是Caddyfile的配置。</p>
+<p>一种是直接使用教程里的方法，另一种就是自己通过编辑器打开Caddy配置文件进行配置，Caddy作为轻量级Web服务端，还是蛮简单的（虽然我还是没搞懂怎么把非80端口的网络服务配置到一个特定URL上去，后面再搞好了）。</p>
+<p>中间碰到说caddy.service头异常，用vim打开后发现是格式问题，建议本地先编辑好缩进后再复制到编辑器中，BTW 通过xshell复制到vim编辑器好像会吃几个字符来着，，蜜汁不懂。</p>
+<p>搭建好了自然也要在uptimebot上进行监控。</p>
+<p>暂时先这样吧。</p>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;Reprint please specify:
+                    </span>
+                    <a href="http://blog.lewisgu.com" class="b-link-green">浅码深思</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2020/03/01/2020-02-18-my-vps-service/" class="b-link-green">VPS运行服务记录</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2020-03-01T13-17-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/03/08/2020-03-08-python-spider-bilibili-barrage-error/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Debug实战【1】：Bilibili排行榜爬虫之弹幕异常错误">
+                        
+                        <span class="card-title">Debug实战【1】：Bilibili排行榜爬虫之弹幕异常错误</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">今天来修一个小bug。
+之前已经把B站爬虫通过编写bat文件并放在启动项里，实现开机自动运行。每次开机的时候就可以自己跑完程序，最后手动输入任意字符退出爬虫。
+今天日常开机，万万没想到熟悉的画面并没有出现，程序自己就闪退了？？？赶紧打开Py</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Debug%E5%AE%9E%E6%88%98/" class="post-category" target="_blank">
+                                    Debug实战
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Spider/" target="_blank">
+                        <span class="chip bg-color">Spider</span>
+                    </a>
+                    
+                    <a href="/tags/Debug/" target="_blank">
+                        <span class="chip bg-color">Debug</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/02/18/2020-02-18-trans-linux-command/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="【转】Linux如何查看进程、杀死进程、启动进程等常用命令">
+                        
+                        <span class="card-title">【转】Linux如何查看进程、杀死进程、启动进程等常用命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">查进程ps命令查找与进程相关的PID号：
+ps a 显示现行终端机下的所有程序，包括其他用户的程序。
+ps -A 显示所有程序。
+ps c 列出程序时，显示每个程序真正的指令名称，而不包含路径，参数或常驻服务的标示。
+ps -e 此参数的效</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/" class="post-category" target="_blank">
+                                    开发参考
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/Thread/" target="_blank">
+                        <span class="chip bg-color">Thread</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">Lewisgu</a>基于
+            <a href="https://hexo.io/" target="_blank">优雅的Hexo</a> 模板及
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">28.9k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/js/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>浅码深思</title>
+  
+  <subtitle>Lewis Gu</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.lewisgu.com/"/>
+  <updated>2021-08-22T03:54:57.106Z</updated>
+  <id>http://blog.lewisgu.com/</id>
+  
+  <author>
+    <name>Lewisgu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>年中闲谈</title>
+    <link href="http://blog.lewisgu.com/2021/08/22/2021-08-22-free-talk/"/>
+    <id>http://blog.lewisgu.com/2021/08/22/2021-08-22-free-talk/</id>
+    <published>2021-08-22T03:46:00.000Z</published>
+    <updated>2021-08-22T03:54:57.106Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;年中闲谈&quot;&gt;&lt;a href=&quot;#年中闲谈&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Life" scheme="http://blog.lewisgu.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021新Flag</title>
+    <link href="http://blog.lewisgu.com/2021/01/02/2021-new-flag/"/>
+    <id>http://blog.lewisgu.com/2021/01/02/2021-new-flag/</id>
+    <published>2021-01-02T05:49:30.000Z</published>
+    <updated>2021-01-31T02:30:00.896Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;新的一年，继续立flag。&lt;/p&gt;
+&lt;h2 id=&quot;工作及技术&quot;&gt;&lt;a href=&quot;#工作及技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Life" scheme="http://blog.lewisgu.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021-01-02-2020Conclusion</title>
+    <link href="http://blog.lewisgu.com/2021/01/02/2021-01-02-2020conclusion/"/>
+    <id>http://blog.lewisgu.com/2021/01/02/2021-01-02-2020conclusion/</id>
+    <published>2021-01-02T04:42:16.000Z</published>
+    <updated>2021-08-22T04:07:09.953Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;2020，最终还是过去了。&lt;/p&gt;
+&lt;p&gt;疫情，买房，工作，恋爱。&lt;/p&gt;
+&lt;p&gt;算是今年对我来说的四件大事吧。&lt;/p&gt;
+&lt;p&gt;因为疫情的原因，在家宅了快一个月。看了些电影，学了点视频剪辑的技术，做了个鬼畜视频聊以自慰。&lt;/p&gt;
+&lt;p&gt;最终还是把房子的事情定了，也因为房贷开
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Life" scheme="http://blog.lewisgu.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用笔记</title>
+    <link href="http://blog.lewisgu.com/2020/04/06/2020-04-06-linux-daily-note/"/>
+    <id>http://blog.lewisgu.com/2020/04/06/2020-04-06-linux-daily-note/</id>
+    <published>2020-04-06T12:37:35.000Z</published>
+    <updated>2021-08-22T04:10:55.119Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;随着上班的繁忙，又有一个月没有写博客了。&lt;/p&gt;
+&lt;p&gt;今天主要记录一下自己使用Linux过程中所使用的主要命令，算是个备忘录。&lt;/p&gt;
+&lt;p&gt;由于目前WSL以及虚拟机均使用Ubuntu较多，所以也就主要记录该系统下的命令。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Linux" scheme="http://blog.lewisgu.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Debug实战【1】：Bilibili排行榜爬虫之弹幕异常错误</title>
+    <link href="http://blog.lewisgu.com/2020/03/08/2020-03-08-python-spider-bilibili-barrage-error/"/>
+    <id>http://blog.lewisgu.com/2020/03/08/2020-03-08-python-spider-bilibili-barrage-error/</id>
+    <published>2020-03-08T03:14:06.000Z</published>
+    <updated>2021-01-31T02:30:00.896Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天来修一个小bug。&lt;/p&gt;
+&lt;p&gt;之前已经把B站爬虫通过编写bat文件并放在启动项里，实现开机自动运行。每次开机的时候就可以自己跑完程序，最后手动输入任意字符退出爬虫。&lt;/p&gt;
+&lt;p&gt;今天日常开机，万万没想到熟悉的画面并没有出现，程序自己就闪退了？？？赶紧打开PyCha
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Debug实战" scheme="http://blog.lewisgu.com/categories/Debug%E5%AE%9E%E6%88%98/"/>
+    
+    
+      <category term="Python" scheme="http://blog.lewisgu.com/tags/Python/"/>
+    
+      <category term="Spider" scheme="http://blog.lewisgu.com/tags/Spider/"/>
+    
+      <category term="Debug" scheme="http://blog.lewisgu.com/tags/Debug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VPS运行服务记录</title>
+    <link href="http://blog.lewisgu.com/2020/03/01/2020-02-18-my-vps-service/"/>
+    <id>http://blog.lewisgu.com/2020/03/01/2020-02-18-my-vps-service/</id>
+    <published>2020-03-01T05:17:00.000Z</published>
+    <updated>2021-01-31T02:30:00.895Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天放搬家假，于是一大早起来就继续鼓捣自己的服务器，然后就想着对目前服务器上跑的东西做个总结，水一篇文章。&lt;/p&gt;
+&lt;h2 id=&quot;不可言说&quot;&gt;&lt;a href=&quot;#不可言说&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="VPS开发" scheme="http://blog.lewisgu.com/categories/VPS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="VPS" scheme="http://blog.lewisgu.com/tags/VPS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【转】Linux如何查看进程、杀死进程、启动进程等常用命令</title>
+    <link href="http://blog.lewisgu.com/2020/02/18/2020-02-18-trans-linux-command/"/>
+    <id>http://blog.lewisgu.com/2020/02/18/2020-02-18-trans-linux-command/</id>
+    <published>2020-02-17T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.895Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;查进程&quot;&gt;&lt;a href=&quot;#查进程&quot; class=&quot;headerlink&quot; title=&quot;查进程&quot;&gt;&lt;/a&gt;查进程&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;ps命令查找与进程相关的PID号：
+ps a 显示现行终端机下的所有程序，包括其他用户的程序。
+ps -A
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发参考" scheme="http://blog.lewisgu.com/categories/%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/"/>
+    
+    
+      <category term="Linux" scheme="http://blog.lewisgu.com/tags/Linux/"/>
+    
+      <category term="Thread" scheme="http://blog.lewisgu.com/tags/Thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>有哪些电影一定要趁年轻看？</title>
+    <link href="http://blog.lewisgu.com/2020/02/15/2020-02-15-zhihu-movie-young/"/>
+    <id>http://blog.lewisgu.com/2020/02/15/2020-02-15-zhihu-movie-young/</id>
+    <published>2020-02-14T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.894Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/25699277&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;有哪些电影一定要趁年轻看&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Movie" scheme="http://blog.lewisgu.com/tags/Movie/"/>
+    
+      <category term="Zhihu" scheme="http://blog.lewisgu.com/tags/Zhihu/"/>
+    
+      <category term="Life" scheme="http://blog.lewisgu.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python爬虫实战【3】：Bilibili排行榜爬虫</title>
+    <link href="http://blog.lewisgu.com/2020/02/09/2020-02-09-python-spider-bilibili/"/>
+    <id>http://blog.lewisgu.com/2020/02/09/2020-02-09-python-spider-bilibili/</id>
+    <published>2020-02-08T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.894Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;昨天刷B站的时候，看到@啊泰同学发了一个&lt;a href=&quot;https://www.bilibili.com/read/cv4611901&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python开发" scheme="http://blog.lewisgu.com/categories/Python%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Python" scheme="http://blog.lewisgu.com/tags/Python/"/>
+    
+      <category term="Spider" scheme="http://blog.lewisgu.com/tags/Spider/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5开发踩坑记</title>
+    <link href="http://blog.lewisgu.com/2020/02/05/2020-02-05-python-pyqt-bugs/"/>
+    <id>http://blog.lewisgu.com/2020/02/05/2020-02-05-python-pyqt-bugs/</id>
+    <published>2020-02-04T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.893Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;PyUIC配置&quot;&gt;&lt;a href=&quot;#PyUIC配置&quot; class=&quot;headerlink&quot; title=&quot;PyUIC配置&quot;&gt;&lt;/a&gt;PyUIC配置&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;系统版本：Win10
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python开发" scheme="http://blog.lewisgu.com/categories/Python%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Python" scheme="http://blog.lewisgu.com/tags/Python/"/>
+    
+      <category term="PyQt5" scheme="http://blog.lewisgu.com/tags/PyQt5/"/>
+    
+      <category term="Debug" scheme="http://blog.lewisgu.com/tags/Debug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5开发尝鲜记【1】</title>
+    <link href="http://blog.lewisgu.com/2020/02/05/2020-02-05-python-pyqt-samp-1/"/>
+    <id>http://blog.lewisgu.com/2020/02/05/2020-02-05-python-pyqt-samp-1/</id>
+    <published>2020-02-04T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.894Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;模仿的对象为&lt;a href=&quot;https://blog.csdn.net/u014563989/article/details/76696763&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;PyQt简单例子: 包括ui文件生成, 代码,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python开发" scheme="http://blog.lewisgu.com/categories/Python%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Python" scheme="http://blog.lewisgu.com/tags/Python/"/>
+    
+      <category term="PyQt5" scheme="http://blog.lewisgu.com/tags/PyQt5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人向电影推荐</title>
+    <link href="http://blog.lewisgu.com/2020/02/03/2020-02-03-my-movie-recommand/"/>
+    <id>http://blog.lewisgu.com/2020/02/03/2020-02-03-my-movie-recommand/</id>
+    <published>2020-02-02T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.893Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一直都比较喜欢看电影，也算是对看过的电影做个盘点推荐什么的。&lt;/p&gt;
+&lt;h2 id=&quot;青春片&quot;&gt;&lt;a href=&quot;#青春片&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Movie" scheme="http://blog.lewisgu.com/tags/Movie/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国大学MOOC——郭炜《C++面向对象程序设计》笔记——第二章</title>
+    <link href="http://blog.lewisgu.com/2020/01/13/2020-01-13-163mooc-cpp-ch02-copy/"/>
+    <id>http://blog.lewisgu.com/2020/01/13/2020-01-13-163mooc-cpp-ch02-copy/</id>
+    <published>2020-01-12T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.893Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;由于最近开始在做C++开发，所以也打算在MOOC上继续跟郭炜老师的《C++面向程序设计》，基本上入门C++。&lt;br&gt;下面的文字，主要就是跟着学习时自己的一点体会。&lt;/p&gt;
+&lt;h2 id=&quot;第二章-类和对象基础&quot;&gt;&lt;a href=&quot;#第二章-类和对象基础&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++学习" scheme="http://blog.lewisgu.com/categories/C-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="C++" scheme="http://blog.lewisgu.com/tags/C/"/>
+    
+      <category term="MOOC" scheme="http://blog.lewisgu.com/tags/MOOC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020新年新Flag</title>
+    <link href="http://blog.lewisgu.com/2020/01/12/2020-01-08-new-year-wish/"/>
+    <id>http://blog.lewisgu.com/2020/01/12/2020-01-08-new-year-wish/</id>
+    <published>2020-01-11T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.892Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;新的一年，立flag的习惯还是得要有的。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;顺利执行并优质完成交代的一切事务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;深入C语言开发技巧，基本掌握C++的开发技术，看完《代码整洁之道》，半本《重构》，至少一小半本《代码大全》。&lt;/p&gt;
+&lt;/li&gt;
+&lt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Daily" scheme="http://blog.lewisgu.com/tags/Daily/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国大学MOOC——郭炜《C++面向对象程序设计》笔记——第一章</title>
+    <link href="http://blog.lewisgu.com/2020/01/12/2020-01-12-163mooc-cpp-ch01/"/>
+    <id>http://blog.lewisgu.com/2020/01/12/2020-01-12-163mooc-cpp-ch01/</id>
+    <published>2020-01-11T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.893Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;由于最近开始在做C++开发，所以也打算在MOOC上继续跟郭炜老师的《C++面向程序设计》，基本上入门C++。&lt;br&gt;下面的文字，主要就是跟着学习时自己的一点体会。&lt;/p&gt;
+&lt;h2 id=&quot;第一章-从C到C&quot;&gt;&lt;a href=&quot;#第一章-从C到C&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++学习" scheme="http://blog.lewisgu.com/categories/C-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="C++" scheme="http://blog.lewisgu.com/tags/C/"/>
+    
+      <category term="MOOC" scheme="http://blog.lewisgu.com/tags/MOOC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日常小技巧</title>
+    <link href="http://blog.lewisgu.com/2020/01/12/2020-01-12-dailly-tips/"/>
+    <id>http://blog.lewisgu.com/2020/01/12/2020-01-12-dailly-tips/</id>
+    <published>2020-01-11T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.893Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文主要也就是对日常使用电脑过程中的小技巧进行记录。&lt;/p&gt;
+&lt;h2 id=&quot;Office&quot;&gt;&lt;a href=&quot;#Office&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Tips" scheme="http://blog.lewisgu.com/tags/Tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>代码构建之我见（1）</title>
+    <link href="http://blog.lewisgu.com/2020/01/05/2020-01-05-clean-code-1/"/>
+    <id>http://blog.lewisgu.com/2020/01/05/2020-01-05-clean-code-1/</id>
+    <published>2020-01-04T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.892Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;说起来，敢在其实还没怎么会写代码的这会儿，起了个这么标题党的名字，“代码构建之我见”，诚惶诚恐。但本质上来讲，还是分享一下自己的一些想法。顺便也算是个总结。&lt;/p&gt;
+&lt;p&gt;从研究生开始，我使用过的编程语言包括C/C++/Python/Matlab/VHDL/Verilog
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Code" scheme="http://blog.lewisgu.com/tags/Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>北邮人下载环境构建</title>
+    <link href="http://blog.lewisgu.com/2019/02/14/2019-02-14-byr-download-envn-build/"/>
+    <id>http://blog.lewisgu.com/2019/02/14/2019-02-14-byr-download-envn-build/</id>
+    <published>2019-02-13T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.891Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;北邮人下载环境构建&quot;&gt;&lt;a href=&quot;#北邮人下载环境构建&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://blog.lewisgu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Tool" scheme="http://blog.lewisgu.com/tags/Tool/"/>
+    
+      <category term="VPS" scheme="http://blog.lewisgu.com/tags/VPS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LabWindows/CVI与Matlab混合编程的一种实现方法</title>
+    <link href="http://blog.lewisgu.com/2018/07/28/2018-07-28-labwindows-matlab-mix-program/"/>
+    <id>http://blog.lewisgu.com/2018/07/28/2018-07-28-labwindows-matlab-mix-program/</id>
+    <published>2018-07-27T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.890Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近一段时间都在学习基于LabWindows/CVI（后文简称CVI）开发模拟软件，由于已有一个不太稳健，但基本框架较为齐备的工程。所以我的工作主要是在这个已有的工程上进行debug、整理修改、开发新功能，从5月开始已经持续了接近三个月。&lt;/p&gt;
+&lt;p&gt;在之前的开发过程中我
+        
+      
+    
+    </summary>
+    
+    
+      <category term="混合开发" scheme="http://blog.lewisgu.com/categories/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="C" scheme="http://blog.lewisgu.com/tags/C/"/>
+    
+      <category term="LabWindows/CVI" scheme="http://blog.lewisgu.com/tags/LabWindows-CVI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于ClIon的CMake、MinGW与Cygwin配置简易指南</title>
+    <link href="http://blog.lewisgu.com/2018/06/18/2018-06-18-c-compile-envn-build/"/>
+    <id>http://blog.lewisgu.com/2018/06/18/2018-06-18-c-compile-envn-build/</id>
+    <published>2018-06-17T16:00:00.000Z</published>
+    <updated>2021-01-31T02:30:00.889Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Clion是捷克公司JetBrains出品的JB全家桶之中主要面向C、C++的集成开发环境。JB家的Pycharm和IDEA是其最为出名的两款，而我也是从Pycharm入的坑。因为近期想再把C捡起来复chong习xin复xue习xi，在网上看了好些相关IDE推荐，最后还是选
+        
+      
+    
+    </summary>
+    
+    
+      <category term="IDE配置" scheme="http://blog.lewisgu.com/categories/IDE%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="C" scheme="http://blog.lewisgu.com/tags/C/"/>
+    
+      <category term="IDE" scheme="http://blog.lewisgu.com/tags/IDE/"/>
+    
+  </entry>
+  
+</feed>
